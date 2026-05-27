@@ -5,21 +5,21 @@
 class Kubestate < Formula
   desc "Kubernetes state metrics utility"
   homepage "https://github.com/paulwelch/kubestate"
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.5/kubestate_0.0.5_darwin_amd64.tar.gz"
-      sha256 "aa2da58d7e38664c441f195703dfb60eff45cacb34a7de5eadc1ea46217e85bb"
+      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.6/kubestate_0.0.6_darwin_amd64.tar.gz"
+      sha256 "7234e087ca7a2428eddc1be0490de38268df3417d70ec817cafe852c3b5d3e5b"
 
       define_method(:install) do
         bin.install "kubestate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.5/kubestate_0.0.5_darwin_arm64.tar.gz"
-      sha256 "2af15274eeac5af6ffba672186bde320b9861eb08d5f8da5c92f5fd81ae0b218"
+      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.6/kubestate_0.0.6_darwin_arm64.tar.gz"
+      sha256 "792c28014c932b01db71a4fa97e7858943a12a8887d51534f7a5d192374d7960"
 
       define_method(:install) do
         bin.install "kubestate"
@@ -29,15 +29,15 @@ class Kubestate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.5/kubestate_0.0.5_linux_amd64.tar.gz"
-      sha256 "0c08c23be53e78599ac715f305a4a7637116e0780ca32f3b04e3f3a216589ebe"
+      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.6/kubestate_0.0.6_linux_amd64.tar.gz"
+      sha256 "cf42a04c99a9fc12139c67a162f1d5dc42d3b82a77b009131ab74abc80927155"
       define_method(:install) do
         bin.install "kubestate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.5/kubestate_0.0.5_linux_arm64.tar.gz"
-      sha256 "9aba3e133ab198dc03e551f76214e043bf542ac013ebf0411629d3e2fe2d1cd6"
+      url "https://github.com/paulwelch/kubestate/releases/download/v0.0.6/kubestate_0.0.6_linux_arm64.tar.gz"
+      sha256 "517c358512112137a523238ce2c2441a0eb31cfbd162ebedbf2931ad74eb17a6"
       define_method(:install) do
         bin.install "kubestate"
       end
